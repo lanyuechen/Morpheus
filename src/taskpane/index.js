@@ -1,7 +1,7 @@
 import "office-ui-fabric-react/dist/css/fabric.min.css";
-import App from "./components/App";
+import App from "./Entry";
 import { AppContainer } from "react-hot-loader";
-import { initializeIcons } from "office-ui-fabric-react/lib/Icons";
+import { initializeIcons } from "@fluentui/react";
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 /* global AppCpntainer, Component, document, Office, module, React, require */
@@ -31,8 +31,8 @@ Office.initialize = () => {
 render(App);
 
 if (module.hot) {
-  module.hot.accept("./components/App", () => {
-    const NextApp = require("./components/App").default;
+  module.hot.accept("./Entry", () => {
+    const NextApp = require("./Entry").default;
     render(NextApp);
   });
 }
